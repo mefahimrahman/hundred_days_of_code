@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  CustomContactApp
+//  ContactApp
 //
 //  Created by Fahim Rahman on 3/4/22.
 //
