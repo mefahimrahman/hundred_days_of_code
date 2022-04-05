@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="e7v-VI-rXF">
-                                <rect key="frame" x="157.5" y="54" width="99" height="32"/>
+                                <rect key="frame" x="157.5" y="44" width="99" height="32"/>
                                 <segments>
                                     <segment title="View"/>
                                     <segment title="Edit"/>
                                 </segments>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="QwQ-VW-Z6v">
-                                <rect key="frame" x="10" y="105" width="394" height="356.5"/>
+                                <rect key="frame" x="10" y="90" width="394" height="356.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oLT-zF-WxK">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="34"/>
@@ -165,11 +165,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="e7v-VI-rXF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9LL-8t-rXM"/>
-                            <constraint firstItem="QwQ-VW-Z6v" firstAttribute="top" secondItem="e7v-VI-rXF" secondAttribute="bottom" constant="20" id="O4O-2V-YPM"/>
-                            <constraint firstItem="e7v-VI-rXF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="WPq-VQ-MZd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QwQ-VW-Z6v" secondAttribute="trailing" constant="10" id="fcA-TF-H7B"/>
-                            <constraint firstItem="QwQ-VW-Z6v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="zNn-4S-HR1"/>
+                            <constraint firstItem="e7v-VI-rXF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4nm-wa-UzX"/>
+                            <constraint firstItem="QwQ-VW-Z6v" firstAttribute="top" secondItem="e7v-VI-rXF" secondAttribute="bottom" constant="15" id="i8n-Zj-8ht"/>
+                            <constraint firstItem="QwQ-VW-Z6v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="jfW-Jf-frq"/>
+                            <constraint firstItem="e7v-VI-rXF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="loR-OX-OGr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QwQ-VW-Z6v" secondAttribute="trailing" constant="10" id="spW-PP-oYs"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="v1v-OI-qba"/>
