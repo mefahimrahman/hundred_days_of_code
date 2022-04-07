@@ -17,17 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="e7v-VI-rXF">
-                                <rect key="frame" x="157.5" y="44" width="99" height="32"/>
+                                <rect key="frame" x="157.5" y="54" width="99" height="32"/>
                                 <segments>
                                     <segment title="View"/>
                                     <segment title="Edit"/>
                                 </segments>
                             </segmentedControl>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Be-Uj-Wi3">
-                                <rect key="frame" x="0.0" y="98" width="414" height="519"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="GfA-bm-5VO">
+                                <rect key="frame" x="0.0" y="100" width="414" height="713"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="7rD-yR-sRA">
-                                        <rect key="frame" x="10" y="15" width="394" height="356.5"/>
+                                        <rect key="frame" x="8" y="50" width="394" height="356.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8sE-Jt-37A">
                                                 <rect key="frame" x="0.0" y="0.0" width="394" height="34"/>
@@ -166,23 +166,25 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="7rD-yR-sRA" firstAttribute="leading" secondItem="NIu-jW-xsB" secondAttribute="leading" constant="10" id="QK2-og-hhh"/>
-                                    <constraint firstItem="7rD-yR-sRA" firstAttribute="width" secondItem="0Be-Uj-Wi3" secondAttribute="width" id="egG-cN-O08"/>
-                                    <constraint firstItem="NIu-jW-xsB" firstAttribute="trailing" secondItem="7rD-yR-sRA" secondAttribute="trailing" constant="10" id="xuN-u9-NwT"/>
+                                    <constraint firstAttribute="bottom" secondItem="7rD-yR-sRA" secondAttribute="bottom" id="E0E-4X-vDX"/>
+                                    <constraint firstItem="7rD-yR-sRA" firstAttribute="top" secondItem="GfA-bm-5VO" secondAttribute="top" constant="50" id="GOz-dp-mcI"/>
+                                    <constraint firstItem="7rD-yR-sRA" firstAttribute="width" secondItem="GfA-bm-5VO" secondAttribute="width" constant="-20" id="g61-LD-j4Y"/>
+                                    <constraint firstItem="7rD-yR-sRA" firstAttribute="leading" secondItem="GfA-bm-5VO" secondAttribute="leadingMargin" id="o19-HK-xOD"/>
+                                    <constraint firstAttribute="trailing" secondItem="7rD-yR-sRA" secondAttribute="trailing" id="x10-MK-tsd"/>
                                 </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="Jq3-O8-VSQ"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="NIu-jW-xsB"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="isD-W7-tzL"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="wf3-AK-yE3"/>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="e7v-VI-rXF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4nm-wa-UzX"/>
-                            <constraint firstItem="7rD-yR-sRA" firstAttribute="top" secondItem="e7v-VI-rXF" secondAttribute="bottom" constant="15" id="IxM-Cg-nRX"/>
-                            <constraint firstItem="0Be-Uj-Wi3" firstAttribute="top" secondItem="e7v-VI-rXF" secondAttribute="bottom" id="Ndg-Z1-qXG"/>
-                            <constraint firstItem="0Be-Uj-Wi3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dpy-YR-myF"/>
-                            <constraint firstItem="e7v-VI-rXF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="loR-OX-OGr"/>
-                            <constraint firstItem="0Be-Uj-Wi3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="x6P-Sk-AgS"/>
+                            <constraint firstItem="GfA-bm-5VO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9Ki-PX-NJD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GfA-bm-5VO" secondAttribute="bottom" id="FdW-QM-G6S"/>
+                            <constraint firstItem="e7v-VI-rXF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Oxf-Z7-rKW"/>
+                            <constraint firstItem="GfA-bm-5VO" firstAttribute="top" secondItem="e7v-VI-rXF" secondAttribute="bottom" constant="15" id="cK8-mb-u0g"/>
+                            <constraint firstAttribute="trailing" secondItem="GfA-bm-5VO" secondAttribute="trailing" id="w5U-re-9t2"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="v1v-OI-qba"/>
