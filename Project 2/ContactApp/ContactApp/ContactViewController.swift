@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class ContactViewController: UIViewController {
+class ContactViewController: UIViewController, DateContollerDelegate {
 
     @IBOutlet var segmentControl: UISegmentedControl!
     @IBOutlet var scrollView: UIScrollView!
@@ -21,6 +21,7 @@ class ContactViewController: UIViewController {
     @IBOutlet var homePhoneTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var changeButton: UIButton!
+    @IBOutlet var lblBirthdate: UILabel!
     
     var currentContact: Contact?
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -139,6 +140,24 @@ class ContactViewController: UIViewController {
         appDelegate.saveContext()
         segmentControl.selectedSegmentIndex = 0
         changeEditMode(self)
+    }
+    
+    func dateChanged(date: Date) {
+        if (currentContact == nil) {
+            let context = appDelegate.persistentContainer.viewContext
+            currentContact = Contact(context: context)
+        }
+        currentContact?.birthday = date
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        lblBirthdate.text = formatter.string(from: date)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "segueContactDate") {
+            let dateController = segue.destination as! DateViewController
+            dateController.delegate = self
+        }
     }
 
 }

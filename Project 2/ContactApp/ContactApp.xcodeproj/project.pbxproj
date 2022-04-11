@@ -17,6 +17,7 @@
 		FFE7228A27F9D28600060A31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE7228827F9D28600060A31 /* LaunchScreen.storyboard */; };
 		FFE7229427F9D41400060A31 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7229327F9D41400060A31 /* MapViewController.swift */; };
 		FFE7229627F9D42000060A31 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7229527F9D42000060A31 /* SettingsViewController.swift */; };
+		FFF2C43128046693005EB1FF /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF2C43028046693005EB1FF /* DateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FFE7228B27F9D28600060A31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFE7229327F9D41400060A31 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FFE7229527F9D42000060A31 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FFF2C43028046693005EB1FF /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				FFE7228827F9D28600060A31 /* LaunchScreen.storyboard */,
 				FFE7228B27F9D28600060A31 /* Info.plist */,
 				FFE7229327F9D41400060A31 /* MapViewController.swift */,
+				FFF2C43028046693005EB1FF /* DateViewController.swift */,
 				FFE7229527F9D42000060A31 /* SettingsViewController.swift */,
 				FFCB8DE427FF221300D78126 /* Constant.swift */,
 			);
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFF2C43128046693005EB1FF /* DateViewController.swift in Sources */,
 				FFE7228227F9D28600060A31 /* ContactViewController.swift in Sources */,
 				FFE7227E27F9D28600060A31 /* AppDelegate.swift in Sources */,
 				FFE7229427F9D41400060A31 /* MapViewController.swift in Sources */,

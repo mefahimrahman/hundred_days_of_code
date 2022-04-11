@@ -163,7 +163,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Change"/>
                                                         <connections>
-                                                            <segue destination="zoq-Cj-DJu" kind="show" id="Sde-vl-EdR"/>
+                                                            <segue destination="zoq-Cj-DJu" kind="show" identifier="segueContactDate" id="Sde-vl-EdR"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -204,6 +204,7 @@
                         <outlet property="contactTextField" destination="PLk-yh-er6" id="UfJ-HX-ULB"/>
                         <outlet property="emailTextField" destination="5GR-bp-8rp" id="eO6-V8-9dT"/>
                         <outlet property="homePhoneTextField" destination="FId-Uw-a5v" id="elg-yr-zNh"/>
+                        <outlet property="lblBirthdate" destination="dVJ-xr-Mgt" id="chJ-pa-iy8"/>
                         <outlet property="scrollView" destination="GfA-bm-5VO" id="bHO-Z9-YFw"/>
                         <outlet property="segmentControl" destination="e7v-VI-rXF" id="fzZ-a5-UTE"/>
                         <outlet property="stateTextField" destination="gGD-Jg-SgR" id="vv3-BN-mf2"/>
@@ -217,7 +218,7 @@
         <!--Birthdate Picker-->
         <scene sceneID="fh6-D6-EM9">
             <objects>
-                <viewController title="Birthdate Picker" id="zoq-Cj-DJu" sceneMemberID="viewController">
+                <viewController title="Birthdate Picker" id="zoq-Cj-DJu" customClass="DateViewController" customModule="ContactApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="awt-oq-yLS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,6 +236,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="c9e-5t-O1Z"/>
+                    <connections>
+                        <outlet property="dtpDate" destination="bTy-RI-ZiW" id="OoB-u5-xqA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6N-tx-xab" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -317,8 +321,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="09H-jY-Cd0"/>
                     <connections>
-                        <outlet property="ascendingSwitch" destination="eaC-jd-wpv" id="4Wf-zZ-tMH"/>
-                        <outlet property="sortPickerView" destination="ekU-yB-Pe1" id="mAc-vW-qe0"/>
+                        <outlet property="pckSortField" destination="ekU-yB-Pe1" id="mAc-vW-qe0"/>
+                        <outlet property="swAscending" destination="eaC-jd-wpv" id="4Wf-zZ-tMH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T0I-Wv-zwg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -9,16 +9,16 @@ import UIKit
 
 class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    @IBOutlet var sortPickerView: UIPickerView!
-    @IBOutlet var ascendingSwitch: UISwitch!
+    @IBOutlet var pckSortField: UIPickerView!
+    @IBOutlet var swAscending: UISwitch!
     
     let sortOrderItems = ["Contact Name", "City", "Birthday"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sortPickerView.delegate = self
-        sortPickerView.dataSource = self
+        pckSortField.delegate = self
+        pckSortField.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,13 +28,13 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         let isAscendingSorted = userDefaults.bool(forKey: Strings.sortDirection)
         
-        ascendingSwitch.setOn(isAscendingSorted, animated: true)
+        swAscending.setOn(isAscendingSorted, animated: true)
         
         let selectedSortField = userDefaults.string(forKey: Strings.sortBy)
         var position = 0
         for item in sortOrderItems {
             if item == selectedSortField {
-                sortPickerView.selectRow(position, inComponent: 0, animated: false)
+                pckSortField.selectRow(position, inComponent: 0, animated: false)
             }
             position += 1
         }
@@ -43,7 +43,7 @@ class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     @IBAction func sortDirectionChanged(_ sender: Any) {
         let userDefaults = UserDefaults.standard
-        userDefaults.set(ascendingSwitch.isOn, forKey: Strings.sortDirection)
+        userDefaults.set(swAscending.isOn, forKey: Strings.sortDirection)
         userDefaults.synchronize()
     }
 }
