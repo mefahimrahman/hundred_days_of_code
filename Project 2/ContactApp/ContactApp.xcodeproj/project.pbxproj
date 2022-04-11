@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FFCB8DE527FF221300D78126 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB8DE427FF221300D78126 /* Constant.swift */; };
+		FFCB8DE827FF28A500D78126 /* MyContactListModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FFCB8DE627FF28A500D78126 /* MyContactListModel.xcdatamodeld */; };
 		FFE7227E27F9D28600060A31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7227D27F9D28600060A31 /* AppDelegate.swift */; };
 		FFE7228027F9D28600060A31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7227F27F9D28600060A31 /* SceneDelegate.swift */; };
 		FFE7228227F9D28600060A31 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7228127F9D28600060A31 /* ContactViewController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		FFCB8DE427FF221300D78126 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		FFCB8DE727FF28A500D78126 /* MyContactListModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyContactListModel.xcdatamodel; sourceTree = "<group>"; };
 		FFE7227A27F9D28600060A31 /* ContactApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE7227D27F9D28600060A31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFE7227F27F9D28600060A31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				FFE7227D27F9D28600060A31 /* AppDelegate.swift */,
+				FFCB8DE627FF28A500D78126 /* MyContactListModel.xcdatamodeld */,
 				FFE7227F27F9D28600060A31 /* SceneDelegate.swift */,
 				FFE7228127F9D28600060A31 /* ContactViewController.swift */,
 				FFE7228327F9D28600060A31 /* Main.storyboard */,
@@ -153,6 +156,7 @@
 				FFE7228027F9D28600060A31 /* SceneDelegate.swift in Sources */,
 				FFE7229627F9D42000060A31 /* SettingsViewController.swift in Sources */,
 				FFCB8DE527FF221300D78126 /* Constant.swift in Sources */,
+				FFCB8DE827FF28A500D78126 /* MyContactListModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +376,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FFCB8DE627FF28A500D78126 /* MyContactListModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FFCB8DE727FF28A500D78126 /* MyContactListModel.xcdatamodel */,
+			);
+			currentVersion = FFCB8DE727FF28A500D78126 /* MyContactListModel.xcdatamodel */;
+			path = MyContactListModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FFE7227227F9D28600060A31 /* Project object */;
 }
