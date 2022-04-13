@@ -12,7 +12,7 @@
 		FFCB8DE827FF28A500D78126 /* MyContactListModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FFCB8DE627FF28A500D78126 /* MyContactListModel.xcdatamodeld */; };
 		FFE7227E27F9D28600060A31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7227D27F9D28600060A31 /* AppDelegate.swift */; };
 		FFE7228027F9D28600060A31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7227F27F9D28600060A31 /* SceneDelegate.swift */; };
-		FFE7228227F9D28600060A31 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7228127F9D28600060A31 /* ContactViewController.swift */; };
+		FFE7228227F9D28600060A31 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7228127F9D28600060A31 /* ContactsViewController.swift */; };
 		FFE7228527F9D28600060A31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE7228327F9D28600060A31 /* Main.storyboard */; };
 		FFE7228727F9D28600060A31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE7228627F9D28600060A31 /* Assets.xcassets */; };
 		FFE7228A27F9D28600060A31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE7228827F9D28600060A31 /* LaunchScreen.storyboard */; };
@@ -28,7 +28,7 @@
 		FFE7227A27F9D28600060A31 /* ContactApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE7227D27F9D28600060A31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFE7227F27F9D28600060A31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FFE7228127F9D28600060A31 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		FFE7228127F9D28600060A31 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		FFE7228427F9D28600060A31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFE7228627F9D28600060A31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFE7228927F9D28600060A31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 				FFE7227D27F9D28600060A31 /* AppDelegate.swift */,
 				FFCB8DE627FF28A500D78126 /* MyContactListModel.xcdatamodeld */,
 				FFE7227F27F9D28600060A31 /* SceneDelegate.swift */,
-				FFE7228127F9D28600060A31 /* ContactViewController.swift */,
+				FFE7228127F9D28600060A31 /* ContactsViewController.swift */,
 				FFE7228327F9D28600060A31 /* Main.storyboard */,
 				FF1BD5E42807050000330920 /* ContactsTableViewController.swift */,
 				FFE7228627F9D28600060A31 /* Assets.xcassets */,
@@ -157,7 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFF2C43128046693005EB1FF /* DateViewController.swift in Sources */,
-				FFE7228227F9D28600060A31 /* ContactViewController.swift in Sources */,
+				FFE7228227F9D28600060A31 /* ContactsViewController.swift in Sources */,
 				FFE7227E27F9D28600060A31 /* AppDelegate.swift in Sources */,
 				FFE7229427F9D41400060A31 /* MapViewController.swift in Sources */,
 				FFE7228027F9D28600060A31 /* SceneDelegate.swift in Sources */,

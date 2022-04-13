@@ -4,7 +4,7 @@
         <attribute name="birthday" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="cellNumber" optional="YES" attributeType="String"/>
         <attribute name="city" optional="YES" attributeType="String"/>
-        <attribute name="contactname" optional="YES" attributeType="String"/>
+        <attribute name="contactName" optional="YES" attributeType="String"/>
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="phoneNumber" optional="YES" attributeType="String"/>
         <attribute name="state" optional="YES" attributeType="String"/>

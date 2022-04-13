@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let userDefaults = UserDefaults.standard
         
         if (userDefaults.string(forKey: Strings.sortBy) == nil) {
-            userDefaults.set("City", forKey: Strings.sortBy)
+            userDefaults.set("city", forKey: Strings.sortBy)
         }
         if (userDefaults.string(forKey: Strings.sortDirection) == nil) {
             userDefaults.set(true, forKey: Strings.sortDirection)

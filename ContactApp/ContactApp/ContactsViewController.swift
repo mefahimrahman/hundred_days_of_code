@@ -8,19 +8,19 @@
 import UIKit
 import CoreData
 
-class ContactViewController: UIViewController, DateContollerDelegate {
+class ContactsViewController: UIViewController, DateContollerDelegate {
 
-    @IBOutlet var segmentControl: UISegmentedControl!
+    @IBOutlet var sgmtEditMode: UISegmentedControl!
     @IBOutlet var scrollView: UIScrollView!
-    @IBOutlet var contactTextField: UITextField!
-    @IBOutlet var addressTextField: UITextField!
-    @IBOutlet var cityTextField: UITextField!
-    @IBOutlet var stateTextField: UITextField!
-    @IBOutlet var zipCodeTextField: UITextField!
-    @IBOutlet var cellPhoneTextField: UITextField!
-    @IBOutlet var homePhoneTextField: UITextField!
-    @IBOutlet var emailTextField: UITextField!
-    @IBOutlet var changeButton: UIButton!
+    @IBOutlet var txtName: UITextField!
+    @IBOutlet var txtAddress: UITextField!
+    @IBOutlet var txtCity: UITextField!
+    @IBOutlet var txtState: UITextField!
+    @IBOutlet var txtZip: UITextField!
+    @IBOutlet var txtCell: UITextField!
+    @IBOutlet var txtPhone: UITextField!
+    @IBOutlet var txtEmail: UITextField!
+    @IBOutlet var btnChange: UIButton!
     @IBOutlet var lblBirthdate: UILabel!
     
     var currentContact: Contact?
@@ -29,21 +29,37 @@ class ContactViewController: UIViewController, DateContollerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if currentContact != nil {
+            txtName.text = currentContact!.contactName
+            txtAddress.text = currentContact!.streetAddress
+            txtCity.text = currentContact!.city
+            txtState.text = currentContact!.state
+            txtZip.text = currentContact!.zipCode
+            txtPhone.text = currentContact!.phoneNumber
+            txtCell.text = currentContact!.cellNumber
+            txtEmail.text = currentContact!.email
+            let formatter = DateFormatter()
+            formatter.dateStyle = .short
+            if (currentContact!.birthday != nil) {
+                lblBirthdate.text = formatter.string(from: currentContact!.birthday!)
+            }
+        }
+        
         changeEditMode(self)
         
         let textFields: [UITextField] = [
-            contactTextField,
-            addressTextField,
-            cityTextField,
-            stateTextField,
-            zipCodeTextField,
-            cellPhoneTextField,
-            homePhoneTextField,
-            emailTextField
+            txtName,
+            txtAddress,
+            txtCity,
+            txtState,
+            txtZip,
+            txtCell,
+            txtPhone,
+            txtEmail
         ]
         
         for textField in textFields {
-            textField.addTarget(self, action: #selector(ContactViewController.textFieldShouldEndEditing(_:)), for: UIControl.Event.editingDidEnd)
+            textField.addTarget(self, action: #selector(ContactsViewController.textFieldShouldEndEditing(_:)), for: UIControl.Event.editingDidEnd)
         }
     }
     
@@ -60,39 +76,39 @@ class ContactViewController: UIViewController, DateContollerDelegate {
     
     @IBAction func changeEditMode(_ sender: Any) {
         let textFields: [UITextField] = [
-            contactTextField,
-            addressTextField,
-            cityTextField,
-            stateTextField,
-            zipCodeTextField,
-            cellPhoneTextField,
-            homePhoneTextField,
-            emailTextField
+            txtName,
+            txtAddress,
+            txtCity,
+            txtState,
+            txtZip,
+            txtCell,
+            txtPhone,
+            txtEmail
         ]
         
-        if (segmentControl.selectedSegmentIndex == 0) {
+        if (sgmtEditMode.selectedSegmentIndex == 0) {
             for eachTextField in textFields {
                 eachTextField.isEnabled = false
                 eachTextField.borderStyle = UITextField.BorderStyle.none
             }
-            changeButton.isHidden = true
+            btnChange.isHidden = true
             navigationItem.rightBarButtonItem = nil
         }
         
-        else if (segmentControl.selectedSegmentIndex == 1) {
+        else if (sgmtEditMode.selectedSegmentIndex == 1) {
             for eachTextField in textFields {
                 eachTextField.isEnabled = true
                 eachTextField.borderStyle = UITextField.BorderStyle.roundedRect
             }
-            changeButton.isHidden = false
+            btnChange.isHidden = false
             navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(self.saveContactByCoreData))
         }
     }
     
     
     func registerKeyboardNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(ContactViewController.keyboardDidShow(notification:)), name: UIResponder.keyboardDidShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(ContactViewController.keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ContactsViewController.keyboardDidShow(notification:)), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ContactsViewController.keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     func unregisterKeyboardNotifications() {
@@ -125,20 +141,20 @@ class ContactViewController: UIViewController, DateContollerDelegate {
             currentContact = Contact(context: context)
         }
         
-        currentContact?.contactname = contactTextField.text
-        currentContact?.streetAddress = addressTextField.text
-        currentContact?.city = cityTextField.text
-        currentContact?.state = stateTextField.text
-        currentContact?.zipCode = zipCodeTextField.text
-        currentContact?.cellNumber = cellPhoneTextField.text
-        currentContact?.phoneNumber = homePhoneTextField.text
-        currentContact?.email = emailTextField.text
+        currentContact?.contactName = txtName.text
+        currentContact?.streetAddress = txtAddress.text
+        currentContact?.city = txtCity.text
+        currentContact?.state = txtState.text
+        currentContact?.zipCode = txtZip.text
+        currentContact?.cellNumber = txtCell.text
+        currentContact?.phoneNumber = txtPhone.text
+        currentContact?.email = txtEmail.text
         return true
     }
 
     @objc func saveContactByCoreData() {
         appDelegate.saveContext()
-        segmentControl.selectedSegmentIndex = 0
+        sgmtEditMode.selectedSegmentIndex = 0
         changeEditMode(self)
     }
     
