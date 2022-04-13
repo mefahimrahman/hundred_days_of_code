@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF1BD5E52807050000330920 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1BD5E42807050000330920 /* ContactsTableViewController.swift */; };
 		FFCB8DE527FF221300D78126 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB8DE427FF221300D78126 /* Constant.swift */; };
 		FFCB8DE827FF28A500D78126 /* MyContactListModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FFCB8DE627FF28A500D78126 /* MyContactListModel.xcdatamodeld */; };
 		FFE7227E27F9D28600060A31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7227D27F9D28600060A31 /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF1BD5E42807050000330920 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		FFCB8DE427FF221300D78126 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		FFCB8DE727FF28A500D78126 /* MyContactListModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyContactListModel.xcdatamodel; sourceTree = "<group>"; };
 		FFE7227A27F9D28600060A31 /* ContactApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +73,7 @@
 				FFE7227F27F9D28600060A31 /* SceneDelegate.swift */,
 				FFE7228127F9D28600060A31 /* ContactViewController.swift */,
 				FFE7228327F9D28600060A31 /* Main.storyboard */,
+				FF1BD5E42807050000330920 /* ContactsTableViewController.swift */,
 				FFE7228627F9D28600060A31 /* Assets.xcassets */,
 				FFE7228827F9D28600060A31 /* LaunchScreen.storyboard */,
 				FFE7228B27F9D28600060A31 /* Info.plist */,
@@ -161,6 +164,7 @@
 				FFE7229627F9D42000060A31 /* SettingsViewController.swift in Sources */,
 				FFCB8DE527FF221300D78126 /* Constant.swift in Sources */,
 				FFCB8DE827FF28A500D78126 /* MyContactListModel.xcdatamodeld in Sources */,
+				FF1BD5E52807050000330920 /* ContactsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
