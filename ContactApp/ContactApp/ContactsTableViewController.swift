@@ -66,8 +66,16 @@ class ContactsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         let contact = contacts[indexPath.row] as? Contact
-        cell.textLabel?.text = contact?.contactName
-        cell.detailTextLabel?.text = contact?.phoneNumber ?? "-"
+        cell.textLabel?.text = "\(contact?.contactName ?? "-") from \(contact?.city ?? "-")"
+        
+        var dateString = ""
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        if (contact?.birthday != nil) {
+            dateString = formatter.string(from: contact?.birthday ?? Date())
+        }
+        
+        cell.detailTextLabel?.text = "Born on: \(dateString)"
         cell.accessoryType = UITableViewCell.AccessoryType.detailDisclosureButton
         return cell
     }
